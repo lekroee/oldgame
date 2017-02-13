@@ -401,6 +401,7 @@ namespace BombsAway
                             else
                             {
                                 pb_Player.Image = Character.jump_l;
+                                
                             }
                             pb_Player.Top -= Speed_Jump;     //Player moves up a bit
                             Force = Gravity;        //Force to be moved up changes

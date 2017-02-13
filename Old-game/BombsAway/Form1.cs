@@ -24,7 +24,7 @@ namespace BombsAway
          */
         #endregion
         #region Vars
-        PictureBox[] Bombs = new PictureBox[10];
+        //PictureBox[] Bombs = new PictureBox[10];
         PictureBox[] Explosives = new PictureBox[10];
         PictureBox[] WorldObjects = new PictureBox[10];
         Control[] DebugMenu = new Control[9];
@@ -270,7 +270,7 @@ namespace BombsAway
         public void Reset()
         {   //Resets everything
             label_Dead.Visible = false;
-            int x = 0;
+            /*int x = 0;
             foreach (PictureBox Bomb in Bombs)
             {
                 if (Bomb != null)
@@ -289,7 +289,7 @@ namespace BombsAway
                     Bombs[x2] = null; ;
                 }
                 x2++;
-            }
+            }*/
             pb_Player.Visible = true;   //Sets the player visible and moves him to start location
             pb_Player.Location = new System.Drawing.Point(167, WorldFrame.Size.Height - 10 - pb_Player.Height);
             pb_NPC1.Location = new System.Drawing.Point(1, WorldFrame.Size.Height - 1 - pb_NPC1.Height);
@@ -473,7 +473,7 @@ namespace BombsAway
         {
             //PBSideCollision(pb_Player, pb_Pipe);
             Anim++; //Just to get animation of character
-            label1.Text = "Bombs: " + GetBombsNum(Bombs); //Sets the number of bombs label
+            //label1.Text = "Bombs: " + GetBombsNum(Bombs); //Sets the number of bombs label
             label2.Text = "Highscore: " + Properties.Settings.Default.Highscore;
             if (Player_Right == true && Anim % 15 == 0)
             {   //Animates the player
@@ -484,7 +484,7 @@ namespace BombsAway
                 pb_Player.Image = Character.walk_l;
             }
 
-            foreach (PictureBox Bomb in Bombs)
+            /*foreach (PictureBox Bomb in Bombs)
             {   //Bomb interaction, checks each bomb on the field
                 if (Bomb != null)
                 {   //Unless the bomb doesnt exist
@@ -502,7 +502,7 @@ namespace BombsAway
                         }
                     }
                 }
-            }
+            }*/
 
             #region NPC
             foreach (PictureBox npc in NPC)
@@ -555,10 +555,10 @@ namespace BombsAway
                 pb_Player.Top--;
             }
 
-            int x = 0;
+            //int x = 0;
             if (GameOn) //If the Game is on
             {
-                foreach (PictureBox Bomb in Bombs)  // For each and every bomb created
+                /*foreach (PictureBox Bomb in Bombs)  // For each and every bomb created
                 {
                     if (Bomb != null)               // Unless if the bomb is null
                     {
@@ -611,12 +611,12 @@ namespace BombsAway
                     {   //Going back to 0 if bomb array is more then 10
                         x = 0;
                     }
-                }
+                }*/
             }
         }
         private void timer_Randombomb_Tick(object sender, EventArgs e)
         {
-            Random rng = new Random();
+            /*Random rng = new Random();
             if (GameOn || (!GameOn && !label_Dead.Visible))
                 if (GetBombsNum(Bombs) == 10)
                 {
@@ -717,18 +717,18 @@ namespace BombsAway
                                 break;
                         }
                     }
-                }
+                }*/
         }
 
         private void timer_Sec_Tick(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
+            /*for (int i = 0; i < 10; i++)
             {
                 if (Bombs[i] != null && Bombs[i].IsDisposed)
                 {
                     Bombs[i] = null;
                 }
-            }
+            }*/
             label_Score.Text = "Score: " + Score;
             if (!label_Dead.Visible)
             {
@@ -770,7 +770,7 @@ namespace BombsAway
 
         private void timer_BombFailsafe_Tick(object sender, EventArgs e)
         {   // Not sure why, but I had to add this failsafe on the bombs aswell.
-            DebugLog += DateTime.Now + ": Bombs - " + BombDebug();
+            //DebugLog += DateTime.Now + ": Bombs - " + BombDebug();
             for (int i = 0; i < 10; i++)
             {   // If the bomb count has been 10 for 3 seconds, everything is reset.
                 if (Explosives[0] != null)
@@ -778,18 +778,18 @@ namespace BombsAway
                     Explosives[0].Dispose();
                     Explosives[0] = null;
                 }
-                if (Bombs[i] != null)
+                /*if (Bombs[i] != null)
                 {
                     Bombs[i].Dispose();
                     Bombs[i] = null;
-                }
+                }*/
             }
             DebugLog += DateTime.Now + ": Had to hard Failsafe\n";
-            DebugLog += DateTime.Now + ": Bombs - " + BombDebug();
+            //DebugLog += DateTime.Now + ": Bombs - " + BombDebug();
         }
         #endregion
         #region Other
-        public string BombDebug()
+        /*public string BombDebug()
         {
             string t = "";
             for (int i = 0; i < 10; i++)
@@ -804,7 +804,7 @@ namespace BombsAway
                 }
             }
             return t;
-        }
+        }*/
 
         public int GetBombsNum(PictureBox[] Arr)
         {
@@ -831,7 +831,7 @@ namespace BombsAway
                     }
                 }
             }   //If for some reason it cant find any. This failsafe runs
-            Bombs[0] = null;    //First bomb gets removed, and returned as available
+            //Bombs[0] = null;    //First bomb gets removed, and returned as available
             return 0;
         }
         #endregion
@@ -853,6 +853,11 @@ namespace BombsAway
             DebugMenu[8] = this.debug_MSpeed;
             NPC[0] = pb_NPC1;
             NPC[1] = pb_NPC2;
+        }
+
+        private void WorldFrame_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

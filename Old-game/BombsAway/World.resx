@@ -121,6 +121,9 @@
   <data name="Boom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Boom.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Platform" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Platform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Clouds" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Clouds.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,7 +139,7 @@
   <data name="Pipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Pipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Platform" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Platform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="beach-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\beach-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

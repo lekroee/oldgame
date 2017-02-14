@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BombsAway.Properties;
+using System.Drawing.Imaging;
 
 namespace BombsAway
 {
     public partial class Form1 : Form
     {
+        private Image stand_r;
         public Form1()
         {
             InitializeComponent();
@@ -295,6 +297,7 @@ namespace BombsAway
             pb_NPC1.Location = new System.Drawing.Point(1, WorldFrame.Size.Height - 1 - pb_NPC1.Height);
             pb_NPC2.Location = new System.Drawing.Point(WorldFrame.Width-10, WorldFrame.Size.Height - 1 - pb_NPC2.Height);
             pb_Player.Image = Character.stand_r;
+            stand_r.MakeTransparent(Color.white);
             Score = 0;
             BombSize = 16;
             GameOn = true;
@@ -853,6 +856,7 @@ namespace BombsAway
             DebugMenu[8] = this.debug_MSpeed;
             NPC[0] = pb_NPC1;
             NPC[1] = pb_NPC2;
+            
         }
 
         private void WorldFrame_Paint(object sender, PaintEventArgs e)
@@ -861,7 +865,12 @@ namespace BombsAway
         }
         public void MakeTransparent(Color transparentColor)
         {
-            
+            stand_r = BombsAway.Properties.Resources.stand_r;
+        }
+
+        private void pb_NPC2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

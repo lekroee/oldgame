@@ -30,21 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.WorldFrame = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.offToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pb_NPC2 = new System.Windows.Forms.PictureBox();
-            this.pb_NPC1 = new System.Windows.Forms.PictureBox();
-            this.label_Dead = new System.Windows.Forms.Label();
-            this.pb_Block1 = new System.Windows.Forms.PictureBox();
-            this.pb_Block2 = new System.Windows.Forms.PictureBox();
-            this.pb_Pipe = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label_Score = new System.Windows.Forms.Label();
-            this.pb_Player = new System.Windows.Forms.PictureBox();
             this.timer_Gravity = new System.Windows.Forms.Timer(this.components);
             this.timer_Jump = new System.Windows.Forms.Timer(this.components);
             this.timer_Anim = new System.Windows.Forms.Timer(this.components);
@@ -62,38 +51,27 @@
             this.debug_PJump = new System.Windows.Forms.Label();
             this.debug_PGravity = new System.Windows.Forms.Label();
             this.debug_MGravity = new System.Windows.Forms.Label();
-            this.WorldFrame.SuspendLayout();
+            this.WorldFrame = new System.Windows.Forms.Panel();
+            this.pb_NPC2 = new System.Windows.Forms.PictureBox();
+            this.pb_NPC1 = new System.Windows.Forms.PictureBox();
+            this.label_Dead = new System.Windows.Forms.Label();
+            this.pb_Block1 = new System.Windows.Forms.PictureBox();
+            this.pb_Block2 = new System.Windows.Forms.PictureBox();
+            this.pb_Pipe = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label_Score = new System.Windows.Forms.Label();
+            this.pb_Player = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1.SuspendLayout();
+            this.WorldFloor.SuspendLayout();
+            this.WorldFrame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Pipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Player)).BeginInit();
-            this.WorldFloor.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // WorldFrame
-            // 
-            this.WorldFrame.BackColor = System.Drawing.Color.SkyBlue;
-            this.WorldFrame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.WorldFrame.ContextMenuStrip = this.contextMenuStrip1;
-            this.WorldFrame.Controls.Add(this.pb_NPC2);
-            this.WorldFrame.Controls.Add(this.pb_NPC1);
-            this.WorldFrame.Controls.Add(this.label_Dead);
-            this.WorldFrame.Controls.Add(this.pb_Block1);
-            this.WorldFrame.Controls.Add(this.pb_Block2);
-            this.WorldFrame.Controls.Add(this.pb_Pipe);
-            this.WorldFrame.Controls.Add(this.label2);
-            this.WorldFrame.Controls.Add(this.label1);
-            this.WorldFrame.Controls.Add(this.label_Score);
-            this.WorldFrame.Controls.Add(this.pb_Player);
-            this.WorldFrame.Dock = System.Windows.Forms.DockStyle.Top;
-            this.WorldFrame.Location = new System.Drawing.Point(0, 0);
-            this.WorldFrame.Name = "WorldFrame";
-            this.WorldFrame.Size = new System.Drawing.Size(656, 241);
-            this.WorldFrame.TabIndex = 0;
-            this.WorldFrame.Paint += new System.Windows.Forms.PaintEventHandler(this.WorldFrame_Paint);
             // 
             // contextMenuStrip1
             // 
@@ -124,112 +102,6 @@
             this.offToolStripMenuItem.Size = new System.Drawing.Size(91, 22);
             this.offToolStripMenuItem.Text = "Off";
             this.offToolStripMenuItem.Click += new System.EventHandler(this.offToolStripMenuItem_Click);
-            // 
-            // pb_NPC2
-            // 
-            this.pb_NPC2.Image = global::BombsAway.Enemy.Enemy_left;
-            this.pb_NPC2.Location = new System.Drawing.Point(38, 64);
-            this.pb_NPC2.Name = "pb_NPC2";
-            this.pb_NPC2.Size = new System.Drawing.Size(20, 20);
-            this.pb_NPC2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_NPC2.TabIndex = 10;
-            this.pb_NPC2.TabStop = false;
-            // 
-            // pb_NPC1
-            // 
-            this.pb_NPC1.Image = global::BombsAway.Properties.Resources.Enemy_right;
-            this.pb_NPC1.Location = new System.Drawing.Point(12, 64);
-            this.pb_NPC1.Name = "pb_NPC1";
-            this.pb_NPC1.Size = new System.Drawing.Size(20, 20);
-            this.pb_NPC1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_NPC1.TabIndex = 9;
-            this.pb_NPC1.TabStop = false;
-            // 
-            // label_Dead
-            // 
-            this.label_Dead.AutoSize = true;
-            this.label_Dead.BackColor = System.Drawing.Color.Transparent;
-            this.label_Dead.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Dead.Location = new System.Drawing.Point(236, 113);
-            this.label_Dead.Name = "label_Dead";
-            this.label_Dead.Size = new System.Drawing.Size(187, 13);
-            this.label_Dead.TabIndex = 1;
-            this.label_Dead.Text = "You died, press Space to start";
-            this.label_Dead.Visible = false;
-            // 
-            // pb_Block1
-            // 
-            this.pb_Block1.BackColor = System.Drawing.Color.Gray;
-            this.pb_Block1.BackgroundImage = global::BombsAway.World.Platform;
-            this.pb_Block1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_Block1.Location = new System.Drawing.Point(451, 182);
-            this.pb_Block1.Name = "pb_Block1";
-            this.pb_Block1.Size = new System.Drawing.Size(151, 24);
-            this.pb_Block1.TabIndex = 8;
-            this.pb_Block1.TabStop = false;
-            // 
-            // pb_Block2
-            // 
-            this.pb_Block2.BackColor = System.Drawing.Color.Gray;
-            this.pb_Block2.BackgroundImage = global::BombsAway.World.Platform;
-            this.pb_Block2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_Block2.Location = new System.Drawing.Point(38, 157);
-            this.pb_Block2.Name = "pb_Block2";
-            this.pb_Block2.Size = new System.Drawing.Size(135, 24);
-            this.pb_Block2.TabIndex = 7;
-            this.pb_Block2.TabStop = false;
-            // 
-            // pb_Pipe
-            // 
-            this.pb_Pipe.BackgroundImage = global::BombsAway.World.Pipe;
-            this.pb_Pipe.Location = new System.Drawing.Point(250, 196);
-            this.pb_Pipe.Name = "pb_Pipe";
-            this.pb_Pipe.Size = new System.Drawing.Size(35, 45);
-            this.pb_Pipe.TabIndex = 5;
-            this.pb_Pipe.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(4, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Highscore: 0";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(4, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Bombs: ";
-            // 
-            // label_Score
-            // 
-            this.label_Score.AutoSize = true;
-            this.label_Score.BackColor = System.Drawing.Color.Transparent;
-            this.label_Score.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Score.Location = new System.Drawing.Point(4, 9);
-            this.label_Score.Name = "label_Score";
-            this.label_Score.Size = new System.Drawing.Size(55, 13);
-            this.label_Score.TabIndex = 2;
-            this.label_Score.Text = "Score: 0";
-            // 
-            // pb_Player
-            // 
-            this.pb_Player.BackColor = System.Drawing.Color.Transparent;
-            this.pb_Player.Image = global::BombsAway.Character.stand_r;
-            this.pb_Player.Location = new System.Drawing.Point(12, 94);
-            this.pb_Player.Name = "pb_Player";
-            this.pb_Player.Size = new System.Drawing.Size(16, 32);
-            this.pb_Player.TabIndex = 0;
-            this.pb_Player.TabStop = false;
             // 
             // timer_Gravity
             // 
@@ -416,6 +288,136 @@
             this.debug_MGravity.Visible = false;
             this.debug_MGravity.Click += new System.EventHandler(this.debug_MGravity_Click);
             // 
+            // WorldFrame
+            // 
+            this.WorldFrame.BackColor = System.Drawing.Color.Transparent;
+            this.WorldFrame.BackgroundImage = global::BombsAway.World.beach_background;
+            this.WorldFrame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.WorldFrame.ContextMenuStrip = this.contextMenuStrip1;
+            this.WorldFrame.Controls.Add(this.pb_NPC2);
+            this.WorldFrame.Controls.Add(this.pb_NPC1);
+            this.WorldFrame.Controls.Add(this.label_Dead);
+            this.WorldFrame.Controls.Add(this.pb_Block1);
+            this.WorldFrame.Controls.Add(this.pb_Block2);
+            this.WorldFrame.Controls.Add(this.pb_Pipe);
+            this.WorldFrame.Controls.Add(this.label2);
+            this.WorldFrame.Controls.Add(this.label1);
+            this.WorldFrame.Controls.Add(this.label_Score);
+            this.WorldFrame.Controls.Add(this.pb_Player);
+            this.WorldFrame.Dock = System.Windows.Forms.DockStyle.Top;
+            this.WorldFrame.Location = new System.Drawing.Point(0, 0);
+            this.WorldFrame.Name = "WorldFrame";
+            this.WorldFrame.Size = new System.Drawing.Size(656, 241);
+            this.WorldFrame.TabIndex = 0;
+            this.WorldFrame.Paint += new System.Windows.Forms.PaintEventHandler(this.WorldFrame_Paint);
+            // 
+            // pb_NPC2
+            // 
+            this.pb_NPC2.Image = global::BombsAway.Enemy.Enemy_left;
+            this.pb_NPC2.Location = new System.Drawing.Point(38, 64);
+            this.pb_NPC2.Name = "pb_NPC2";
+            this.pb_NPC2.Size = new System.Drawing.Size(20, 20);
+            this.pb_NPC2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_NPC2.TabIndex = 10;
+            this.pb_NPC2.TabStop = false;
+            this.pb_NPC2.Click += new System.EventHandler(this.pb_NPC2_Click);
+            // 
+            // pb_NPC1
+            // 
+            this.pb_NPC1.Image = global::BombsAway.Properties.Resources.Enemy_right;
+            this.pb_NPC1.Location = new System.Drawing.Point(12, 64);
+            this.pb_NPC1.Name = "pb_NPC1";
+            this.pb_NPC1.Size = new System.Drawing.Size(20, 20);
+            this.pb_NPC1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_NPC1.TabIndex = 9;
+            this.pb_NPC1.TabStop = false;
+            // 
+            // label_Dead
+            // 
+            this.label_Dead.AutoSize = true;
+            this.label_Dead.BackColor = System.Drawing.Color.Transparent;
+            this.label_Dead.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Dead.Location = new System.Drawing.Point(236, 113);
+            this.label_Dead.Name = "label_Dead";
+            this.label_Dead.Size = new System.Drawing.Size(187, 13);
+            this.label_Dead.TabIndex = 1;
+            this.label_Dead.Text = "You died, press Space to start";
+            this.label_Dead.Visible = false;
+            // 
+            // pb_Block1
+            // 
+            this.pb_Block1.BackColor = System.Drawing.Color.Gray;
+            this.pb_Block1.BackgroundImage = global::BombsAway.World.Platform;
+            this.pb_Block1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pb_Block1.Location = new System.Drawing.Point(451, 182);
+            this.pb_Block1.Name = "pb_Block1";
+            this.pb_Block1.Size = new System.Drawing.Size(151, 24);
+            this.pb_Block1.TabIndex = 8;
+            this.pb_Block1.TabStop = false;
+            // 
+            // pb_Block2
+            // 
+            this.pb_Block2.BackColor = System.Drawing.Color.Gray;
+            this.pb_Block2.BackgroundImage = global::BombsAway.World.Platform;
+            this.pb_Block2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pb_Block2.Location = new System.Drawing.Point(38, 157);
+            this.pb_Block2.Name = "pb_Block2";
+            this.pb_Block2.Size = new System.Drawing.Size(135, 24);
+            this.pb_Block2.TabIndex = 7;
+            this.pb_Block2.TabStop = false;
+            // 
+            // pb_Pipe
+            // 
+            this.pb_Pipe.BackgroundImage = global::BombsAway.World.Pipe;
+            this.pb_Pipe.Location = new System.Drawing.Point(250, 196);
+            this.pb_Pipe.Name = "pb_Pipe";
+            this.pb_Pipe.Size = new System.Drawing.Size(35, 45);
+            this.pb_Pipe.TabIndex = 5;
+            this.pb_Pipe.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(4, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Highscore: 0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(4, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Bombs: ";
+            // 
+            // label_Score
+            // 
+            this.label_Score.AutoSize = true;
+            this.label_Score.BackColor = System.Drawing.Color.Transparent;
+            this.label_Score.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Score.Location = new System.Drawing.Point(4, 9);
+            this.label_Score.Name = "label_Score";
+            this.label_Score.Size = new System.Drawing.Size(55, 13);
+            this.label_Score.TabIndex = 2;
+            this.label_Score.Text = "Score: 0";
+            // 
+            // pb_Player
+            // 
+            this.pb_Player.BackColor = System.Drawing.Color.Transparent;
+            this.pb_Player.Image = global::BombsAway.Character.stand_r;
+            this.pb_Player.Location = new System.Drawing.Point(12, 94);
+            this.pb_Player.Name = "pb_Player";
+            this.pb_Player.Size = new System.Drawing.Size(16, 32);
+            this.pb_Player.TabIndex = 0;
+            this.pb_Player.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -432,17 +434,17 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.WorldFloor.ResumeLayout(false);
+            this.WorldFloor.PerformLayout();
             this.WorldFrame.ResumeLayout(false);
             this.WorldFrame.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Pipe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Player)).EndInit();
-            this.WorldFloor.ResumeLayout(false);
-            this.WorldFloor.PerformLayout();
             this.ResumeLayout(false);
 
         }

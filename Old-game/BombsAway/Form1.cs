@@ -297,7 +297,7 @@ namespace BombsAway
             pb_NPC1.Location = new System.Drawing.Point(1, WorldFrame.Size.Height - 1 - pb_NPC1.Height);
             pb_NPC2.Location = new System.Drawing.Point(WorldFrame.Width-10, WorldFrame.Size.Height - 1 - pb_NPC2.Height);
             pb_Player.Image = Character.stand_r;
-            stand_r.MakeTransparent(Color.white);
+            //stand_r.MakeTransparent(Color.white);
             Score = 0;
             BombSize = 16;
             GameOn = true;

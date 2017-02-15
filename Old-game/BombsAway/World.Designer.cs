@@ -73,6 +73,16 @@ namespace BombsAway {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap beach_background1 {
+            get {
+                object obj = ResourceManager.GetObject("beach-background1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boom {
             get {
                 object obj = ResourceManager.GetObject("Boom", resourceCulture);

@@ -37,6 +37,8 @@ namespace BombsAway
         Boolean Player_Left = false;    //.. moving to the left
         Boolean Player_Right = false;   //.. moving to the right
         Boolean LastDirRight = true;    // Whats the last dir facing
+        Boolean SwordRight = false;
+        Boolean SwordLeft = false;
         Boolean GameOn = false;         //Is the game on?
         Boolean GodMode = false;
         Boolean Debug = false;
@@ -387,6 +389,14 @@ namespace BombsAway
                     {
                         LastDirRight = true;
                         Player_Right = true;
+                    }
+                    break;
+                case Keys.F:                // On Right Keypress down
+                    if (GameOn)
+                    {
+                        LastDirRight = true;
+                        Player_Right = true;
+                        
                     }
                     break;
                 case Keys.Space:    // On Space Keypress down

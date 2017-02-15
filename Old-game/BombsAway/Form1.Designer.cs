@@ -291,7 +291,7 @@
             // WorldFrame
             // 
             this.WorldFrame.BackColor = System.Drawing.Color.Transparent;
-            this.WorldFrame.BackgroundImage = global::BombsAway.World.beach_background;
+            this.WorldFrame.BackgroundImage = global::BombsAway.World.beach_background1;
             this.WorldFrame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.WorldFrame.ContextMenuStrip = this.contextMenuStrip1;
             this.WorldFrame.Controls.Add(this.pb_NPC2);

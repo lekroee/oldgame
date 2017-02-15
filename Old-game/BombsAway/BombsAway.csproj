@@ -178,6 +178,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bomb.ico" />
+    <None Include="Resources\beach-background.bmp" />
+    <None Include="Resources\sword-right.png" />
+    <None Include="Resources\sword-left.png" />
     <None Include="Resources\beach-background.jpg" />
     <None Include="Resources\Platform.png" />
     <None Include="Resources\Enemy-right.png" />

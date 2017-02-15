@@ -313,10 +313,12 @@
             // 
             // pb_NPC2
             // 
+            this.pb_NPC2.BackColor = System.Drawing.Color.Transparent;
+            this.pb_NPC2.BackgroundImage = global::BombsAway.World.beach_background;
             this.pb_NPC2.Image = global::BombsAway.Enemy.Enemy_left;
-            this.pb_NPC2.Location = new System.Drawing.Point(38, 64);
+            this.pb_NPC2.Location = new System.Drawing.Point(111, 44);
             this.pb_NPC2.Name = "pb_NPC2";
-            this.pb_NPC2.Size = new System.Drawing.Size(20, 20);
+            this.pb_NPC2.Size = new System.Drawing.Size(35, 35);
             this.pb_NPC2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_NPC2.TabIndex = 10;
             this.pb_NPC2.TabStop = false;
@@ -325,9 +327,9 @@
             // pb_NPC1
             // 
             this.pb_NPC1.Image = global::BombsAway.Properties.Resources.Enemy_right;
-            this.pb_NPC1.Location = new System.Drawing.Point(12, 64);
+            this.pb_NPC1.Location = new System.Drawing.Point(65, 55);
             this.pb_NPC1.Name = "pb_NPC1";
-            this.pb_NPC1.Size = new System.Drawing.Size(20, 20);
+            this.pb_NPC1.Size = new System.Drawing.Size(35, 35);
             this.pb_NPC1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_NPC1.TabIndex = 9;
             this.pb_NPC1.TabStop = false;
@@ -343,6 +345,7 @@
             this.label_Dead.TabIndex = 1;
             this.label_Dead.Text = "You died, press Space to start";
             this.label_Dead.Visible = false;
+            this.label_Dead.Click += new System.EventHandler(this.label_Dead_Click);
             // 
             // pb_Block1
             // 
@@ -411,10 +414,12 @@
             // pb_Player
             // 
             this.pb_Player.BackColor = System.Drawing.Color.Transparent;
+            this.pb_Player.BackgroundImage = global::BombsAway.World.beach_background;
             this.pb_Player.Image = global::BombsAway.Character.stand_r;
-            this.pb_Player.Location = new System.Drawing.Point(12, 94);
+            this.pb_Player.Location = new System.Drawing.Point(12, 76);
             this.pb_Player.Name = "pb_Player";
-            this.pb_Player.Size = new System.Drawing.Size(16, 32);
+            this.pb_Player.Size = new System.Drawing.Size(35, 55);
+            this.pb_Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Player.TabIndex = 0;
             this.pb_Player.TabStop = false;
             // 

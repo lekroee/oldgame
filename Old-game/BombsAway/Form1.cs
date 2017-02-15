@@ -12,9 +12,10 @@ using System.Drawing.Imaging;
 
 namespace BombsAway
 {
+
     public partial class Form1 : Form
     {
-        private Image stand_r;
+    
         public Form1()
         {
             InitializeComponent();
@@ -865,10 +866,15 @@ namespace BombsAway
         }
         public void MakeTransparent(Color transparentColor)
         {
-            stand_r = BombsAway.Properties.Resources.stand_r;
+
         }
 
         private void pb_NPC2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_Dead_Click(object sender, EventArgs e)
         {
 
         }

@@ -391,12 +391,18 @@ namespace BombsAway
                         Player_Right = true;
                     }
                     break;
-                case Keys.F:                // On Right Keypress down
+                case Keys.F:                // On F Keypress down
                     if (GameOn)
                     {
                         LastDirRight = true;
-                        Player_Right = true;
-                        
+                        SwordLeft = true;                        
+                    }
+                    break;
+                case Keys.G:                // On G Keypress down
+                    if (GameOn)
+                    {
+                        LastDirRight = true;
+                        SwordRight = true;
                     }
                     break;
                 case Keys.Space:    // On Space Keypress down
@@ -438,6 +444,16 @@ namespace BombsAway
                         break;
                     case Keys.Right:
                         pb_Player.Image = Character.stand_r;
+                        LastDirRight = true;
+                        Player_Right = false;
+                        break;
+                    case Keys.G:
+                        pb_Player.Image = Character.sword_right;
+                        LastDirRight = true;
+                        Player_Right = false;
+                        break;
+                    case Keys.F:
+                        pb_Player.Image = Character.sword_left;
                         LastDirRight = true;
                         Player_Right = false;
                         break;
@@ -523,7 +539,14 @@ namespace BombsAway
             {
                 if (npc.Bounds.IntersectsWith(pb_Player.Bounds))
                 {
-                    Dead();
+                    if(SwordLeft == true || SwordRight == true)
+                    {
+                        npc.Dispose();
+                    }
+                    else
+                    {
+                        Dead();
+                    }
                 }
                 else
                 {
@@ -853,7 +876,7 @@ namespace BombsAway
         private void Form1_Load(object sender, EventArgs e)
         {
             Reset();
-            WorldObjects[0] = pb_Pipe;
+            //WorldObjects[0] = pb_Pipe;
             WorldObjects[1] = pb_Block1;
             WorldObjects[2] = pb_Block2;
             DebugMenu[0] = this.debug_Log;

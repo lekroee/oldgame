@@ -299,7 +299,7 @@
             this.WorldFrame.Controls.Add(this.label_Dead);
             this.WorldFrame.Controls.Add(this.pb_Block1);
             this.WorldFrame.Controls.Add(this.pb_Block2);
-            this.WorldFrame.Controls.Add(this.pb_Pipe);
+            //this.WorldFrame.Controls.Add(this.pb_Pipe);
             this.WorldFrame.Controls.Add(this.label2);
             this.WorldFrame.Controls.Add(this.label1);
             this.WorldFrame.Controls.Add(this.label_Score);

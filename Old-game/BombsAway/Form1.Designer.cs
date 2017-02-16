@@ -52,7 +52,6 @@
             this.debug_PGravity = new System.Windows.Forms.Label();
             this.debug_MGravity = new System.Windows.Forms.Label();
             this.WorldFrame = new System.Windows.Forms.Panel();
-            this.pb_NPC2 = new System.Windows.Forms.PictureBox();
             this.pb_NPC1 = new System.Windows.Forms.PictureBox();
             this.label_Dead = new System.Windows.Forms.Label();
             this.pb_Block1 = new System.Windows.Forms.PictureBox();
@@ -64,7 +63,6 @@
             this.contextMenuStrip1.SuspendLayout();
             this.WorldFloor.SuspendLayout();
             this.WorldFrame.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_NPC2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).BeginInit();
@@ -123,7 +121,7 @@
             // 
             this.timer_Randombomb.Enabled = true;
             this.timer_Randombomb.Interval = 800;
-            this.timer_Randombomb.Tick += new System.EventHandler(this.timer_Randombomb_Tick);
+            this.timer_Randombomb.Tick += new System.EventHandler(this.timer_RandomEnemy_Tick);
             // 
             // timer_BombFailsafe
             // 
@@ -144,7 +142,6 @@
             // 
             // WorldFloor
             // 
-            this.WorldFloor.BackgroundImage = global::BombsAway.Properties.Resources.floor;
             this.WorldFloor.Controls.Add(this.debug_MSpeed);
             this.WorldFloor.Controls.Add(this.debug_Log);
             this.WorldFloor.Controls.Add(this.debug_PSpeed);
@@ -292,7 +289,6 @@
             this.WorldFrame.BackgroundImage = global::BombsAway.World.beach_background1;
             this.WorldFrame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.WorldFrame.ContextMenuStrip = this.contextMenuStrip1;
-            this.WorldFrame.Controls.Add(this.pb_NPC2);
             this.WorldFrame.Controls.Add(this.pb_NPC1);
             this.WorldFrame.Controls.Add(this.label_Dead);
             this.WorldFrame.Controls.Add(this.pb_Block1);
@@ -308,23 +304,9 @@
             this.WorldFrame.TabIndex = 0;
             this.WorldFrame.Paint += new System.Windows.Forms.PaintEventHandler(this.WorldFrame_Paint);
             // 
-            // pb_NPC2
-            // 
-            this.pb_NPC2.BackColor = System.Drawing.Color.Transparent;
-            this.pb_NPC2.BackgroundImage = global::BombsAway.World.beach_background;
-            this.pb_NPC2.Image = global::BombsAway.Enemy.Enemy_left;
-            this.pb_NPC2.Location = new System.Drawing.Point(111, 44);
-            this.pb_NPC2.Name = "pb_NPC2";
-            this.pb_NPC2.Size = new System.Drawing.Size(35, 35);
-            this.pb_NPC2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_NPC2.TabIndex = 10;
-            this.pb_NPC2.TabStop = false;
-            this.pb_NPC2.Click += new System.EventHandler(this.pb_NPC2_Click);
-            // 
             // pb_NPC1
             // 
-            this.pb_NPC1.Image = global::BombsAway.Properties.Resources.Enemy_right;
-            this.pb_NPC1.Location = new System.Drawing.Point(65, 55);
+            this.pb_NPC1.Location = new System.Drawing.Point(58, 86);
             this.pb_NPC1.Name = "pb_NPC1";
             this.pb_NPC1.Size = new System.Drawing.Size(35, 35);
             this.pb_NPC1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -432,7 +414,6 @@
             this.WorldFloor.PerformLayout();
             this.WorldFrame.ResumeLayout(false);
             this.WorldFrame.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_NPC2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).EndInit();
@@ -474,7 +455,6 @@
         private System.Windows.Forms.ToolStripMenuItem onToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem offToolStripMenuItem;
         private System.Windows.Forms.PictureBox pb_NPC1;
-        private System.Windows.Forms.PictureBox pb_NPC2;
     }
 }
 

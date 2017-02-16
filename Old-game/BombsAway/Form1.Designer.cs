@@ -57,7 +57,7 @@
             this.label_Dead = new System.Windows.Forms.Label();
             this.pb_Block1 = new System.Windows.Forms.PictureBox();
             this.pb_Block2 = new System.Windows.Forms.PictureBox();
-            this.pb_Pipe = new System.Windows.Forms.PictureBox();
+            //this.pb_Pipe = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_Score = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Pipe)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pb_Pipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Player)).BeginInit();
             this.SuspendLayout();
             // 
@@ -371,12 +371,12 @@
             // 
             // pb_Pipe
             // 
-            this.pb_Pipe.BackgroundImage = global::BombsAway.World.Pipe;
+            /*this.pb_Pipe.BackgroundImage = global::BombsAway.World.Pipe;
             this.pb_Pipe.Location = new System.Drawing.Point(250, 196);
             this.pb_Pipe.Name = "pb_Pipe";
             this.pb_Pipe.Size = new System.Drawing.Size(35, 45);
             this.pb_Pipe.TabIndex = 5;
-            this.pb_Pipe.TabStop = false;
+            this.pb_Pipe.TabStop = false;*/
             // 
             // label2
             // 
@@ -448,7 +448,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Pipe)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pb_Pipe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Player)).EndInit();
             this.ResumeLayout(false);
 

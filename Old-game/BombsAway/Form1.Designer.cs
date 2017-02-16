@@ -472,7 +472,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timerBoomRemove;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pb_Pipe;
+        //private System.Windows.Forms.PictureBox pb_Pipe;
         private System.Windows.Forms.Label debug_Log;
         private System.Windows.Forms.PictureBox pb_Block1;
         private System.Windows.Forms.PictureBox pb_Block2;

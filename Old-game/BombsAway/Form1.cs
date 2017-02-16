@@ -45,7 +45,7 @@ namespace BombsAway
         Boolean GodMode = false;
         Boolean Debug = false;
         string DebugLog = "STARTED: " + DateTime.Now + "\n";
-        int Gravity = 20;
+        int Gravity = 25;
         int Anim = 0;
         int Force = 0;
         int BombSize = 16;
@@ -879,8 +879,8 @@ namespace BombsAway
         {
             Reset();
             //WorldObjects[0] = pb_Pipe;
-            WorldObjects[1] = pb_Block1;
-            WorldObjects[2] = pb_Block2;
+            //WorldObjects[1] = pb_Block1;
+            //WorldObjects[2] = pb_Block2;
             DebugMenu[0] = this.debug_Log;
             DebugMenu[1] = this.debug_Godmode;
             DebugMenu[2] = this.debug_NoBombs;
@@ -912,6 +912,11 @@ namespace BombsAway
         }
 
         private void label_Dead_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pb_Block1_Click(object sender, EventArgs e)
         {
 
         }

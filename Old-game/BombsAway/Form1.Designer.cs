@@ -55,9 +55,8 @@
             this.pb_NPC2 = new System.Windows.Forms.PictureBox();
             this.pb_NPC1 = new System.Windows.Forms.PictureBox();
             this.label_Dead = new System.Windows.Forms.Label();
-            this.pb_Block1 = new System.Windows.Forms.PictureBox();
-            this.pb_Block2 = new System.Windows.Forms.PictureBox();
-            //this.pb_Pipe = new System.Windows.Forms.PictureBox();
+            //this.pb_Block1 = new System.Windows.Forms.PictureBox();
+            //this.pb_Block2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_Score = new System.Windows.Forms.Label();
@@ -67,9 +66,8 @@
             this.WorldFrame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.pb_Pipe)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Player)).BeginInit();
             this.SuspendLayout();
             // 
@@ -297,9 +295,8 @@
             this.WorldFrame.Controls.Add(this.pb_NPC2);
             this.WorldFrame.Controls.Add(this.pb_NPC1);
             this.WorldFrame.Controls.Add(this.label_Dead);
-            this.WorldFrame.Controls.Add(this.pb_Block1);
-            this.WorldFrame.Controls.Add(this.pb_Block2);
-            //this.WorldFrame.Controls.Add(this.pb_Pipe);
+            //this.WorldFrame.Controls.Add(this.pb_Block1);
+            //this.WorldFrame.Controls.Add(this.pb_Block2);
             this.WorldFrame.Controls.Add(this.label2);
             this.WorldFrame.Controls.Add(this.label1);
             this.WorldFrame.Controls.Add(this.label_Score);
@@ -349,7 +346,7 @@
             // 
             // pb_Block1
             // 
-            this.pb_Block1.BackColor = System.Drawing.Color.Gray;
+            /*this.pb_Block1.BackColor = System.Drawing.Color.Gray;
             this.pb_Block1.BackgroundImage = global::BombsAway.World.Platform;
             this.pb_Block1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pb_Block1.Location = new System.Drawing.Point(451, 182);
@@ -357,6 +354,7 @@
             this.pb_Block1.Size = new System.Drawing.Size(151, 24);
             this.pb_Block1.TabIndex = 8;
             this.pb_Block1.TabStop = false;
+            this.pb_Block1.Click += new System.EventHandler(this.pb_Block1_Click);
             // 
             // pb_Block2
             // 
@@ -367,16 +365,7 @@
             this.pb_Block2.Name = "pb_Block2";
             this.pb_Block2.Size = new System.Drawing.Size(135, 24);
             this.pb_Block2.TabIndex = 7;
-            this.pb_Block2.TabStop = false;
-            // 
-            // pb_Pipe
-            // 
-            /*this.pb_Pipe.BackgroundImage = global::BombsAway.World.Pipe;
-            this.pb_Pipe.Location = new System.Drawing.Point(250, 196);
-            this.pb_Pipe.Name = "pb_Pipe";
-            this.pb_Pipe.Size = new System.Drawing.Size(35, 45);
-            this.pb_Pipe.TabIndex = 5;
-            this.pb_Pipe.TabStop = false;*/
+            this.pb_Block2.TabStop = false;*/
             // 
             // label2
             // 
@@ -446,9 +435,8 @@
             this.WorldFrame.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.pb_Pipe)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Player)).EndInit();
             this.ResumeLayout(false);
 
@@ -474,8 +462,8 @@
         private System.Windows.Forms.Label label2;
         //private System.Windows.Forms.PictureBox pb_Pipe;
         private System.Windows.Forms.Label debug_Log;
-        private System.Windows.Forms.PictureBox pb_Block1;
-        private System.Windows.Forms.PictureBox pb_Block2;
+        //private System.Windows.Forms.PictureBox pb_Block1;
+        //private System.Windows.Forms.PictureBox pb_Block2;
         private System.Windows.Forms.Label debug_Godmode;
         private System.Windows.Forms.Label debug_NoBombs;
         private System.Windows.Forms.Label debug_MGravity;

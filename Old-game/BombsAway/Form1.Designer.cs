@@ -414,7 +414,7 @@
             // pb_Player
             // 
             this.pb_Player.BackColor = System.Drawing.Color.Transparent;
-            this.pb_Player.BackgroundImage = global::BombsAway.World.beach_background;
+            this.pb_Player.BackgroundImage = global::BombsAway.World.beach_background1;
             this.pb_Player.Image = global::BombsAway.Character.stand_r;
             this.pb_Player.Location = new System.Drawing.Point(12, 76);
             this.pb_Player.Name = "pb_Player";

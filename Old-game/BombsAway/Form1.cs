@@ -15,6 +15,8 @@ namespace BombsAway
 
     public partial class Form1 : Form
     {
+        Image player = BombsAway.Properties.Resources.stand_r;
+        Bitmap myBitp;
     
         public Form1()
         {
@@ -899,7 +901,9 @@ namespace BombsAway
         }
         public void MakeTransparent(Color transparentColor)
         {
-
+            Color backColor = Color.White;
+            myBitp = new Bitmap(player);
+            myBitp.MakeTransparent(backColor);
         }
 
         private void pb_NPC2_Click(object sender, EventArgs e)

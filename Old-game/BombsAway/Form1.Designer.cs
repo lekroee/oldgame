@@ -312,7 +312,7 @@
             // 
             this.pb_NPC2.BackColor = System.Drawing.Color.Transparent;
             this.pb_NPC2.BackgroundImage = global::BombsAway.World.beach_background;
-            this.pb_NPC2.Image = global::BombsAway.Enemy.Enemy_left;
+            this.pb_NPC2.Image = global::BombsAway.Enemy.Enemy_Left;
             this.pb_NPC2.Location = new System.Drawing.Point(111, 44);
             this.pb_NPC2.Name = "pb_NPC2";
             this.pb_NPC2.Size = new System.Drawing.Size(35, 35);
@@ -323,7 +323,7 @@
             // 
             // pb_NPC1
             // 
-            this.pb_NPC1.Image = global::BombsAway.Properties.Resources.Enemy_right;
+            this.pb_NPC1.Image = global::BombsAway.Properties.Resources.Enemy_Right;
             this.pb_NPC1.Location = new System.Drawing.Point(65, 55);
             this.pb_NPC1.Name = "pb_NPC1";
             this.pb_NPC1.Size = new System.Drawing.Size(35, 35);

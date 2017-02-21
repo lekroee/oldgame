@@ -15,8 +15,6 @@ namespace BombsAway
 
     public partial class Form1 : Form
     {
-        Image player = BombsAway.Properties.Resources.stand_r;
-        Bitmap myBitp;
     
         public Form1()
         {
@@ -32,6 +30,7 @@ namespace BombsAway
         //PictureBox[] Bombs = new PictureBox[10];
         PictureBox[] Explosives = new PictureBox[10];
         PictureBox[] WorldObjects = new PictureBox[10];
+        PictureBox[] Enemyyy = new PictureBox[10];
         Control[] DebugMenu = new Control[9];
         PictureBox[] NPC = new PictureBox[2];
         Random rng = new Random();
@@ -300,7 +299,7 @@ namespace BombsAway
             pb_Player.Visible = true;   //Sets the player visible and moves him to start location
             pb_Player.Location = new System.Drawing.Point(167, WorldFrame.Size.Height - 10 - pb_Player.Height);
             pb_NPC1.Location = new System.Drawing.Point(1, WorldFrame.Size.Height - 1 - pb_NPC1.Height);
-            pb_NPC2.Location = new System.Drawing.Point(WorldFrame.Width-10, WorldFrame.Size.Height - 1 - pb_NPC2.Height);
+            //pb_NPC2.Location = new System.Drawing.Point(WorldFrame.Width-10, WorldFrame.Size.Height - 1 - pb_NPC2.Height);
             pb_Player.Image = Character.stand_r;
             //stand_r.MakeTransparent(Color.white);
             Score = 0;
@@ -534,10 +533,11 @@ namespace BombsAway
                         }
                     }
                 }
-            }*/
+                */
+            }
 
             #region NPC
-            foreach (PictureBox npc in NPC)
+           /* foreach (PictureBox npc in NPC)
             {
                 if (npc.Bounds.IntersectsWith(pb_Player.Bounds))
                 {
@@ -555,16 +555,16 @@ namespace BombsAway
                     if (npc.Location.X > pb_Player.Location.X && npc.Location.X < WorldFrame.Width && !Collision_Right(npc) && GameOn)
                     {
                         npc.Left--;
-                        npc.Image = Enemy.Enemy_left;
+                        //.Image = Enemy.Enemy_left;
                     }
                     if (npc.Location.X < pb_Player.Location.X && npc.Location.X > 0 && !Collision_Left(npc) && GameOn)
                     {
                         npc.Left++;
-                        npc.Image = Enemy.Enemy_right;
+                        //npc.Image = Enemy.Enemy_right;
                     }
                 }
             }
-        }
+        }*/
 
         public Boolean NoCollision(PictureBox tar)
         {
@@ -653,11 +653,11 @@ namespace BombsAway
                 }*/
             }
         }
-        private void timer_Randombomb_Tick(object sender, EventArgs e)
+        private void timer_RandomEnemy_Tick(object sender, EventArgs e)
         {
-            /*Random rng = new Random();
+            Random rng = new Random();
             if (GameOn || (!GameOn && !label_Dead.Visible))
-                if (GetBombsNum(Bombs) == 10)
+                if (GetEnemyNum(Enemyyy) == 10)
                 {
                     timer_BombFailsafe.Enabled = true;
                 }
@@ -666,7 +666,7 @@ namespace BombsAway
                     timer_BombFailsafe.Enabled = false;
                     {
                         int r = 2;
-                        int NextSpot = NextBomb(Bombs);
+                        int NextSpot = NextEnemy(Enemyyy);
                         if (Score > 20 && Score < 40) r = 12;
                         if (Score > 40 && Score < 80) r = 13;
                         if (Score > 80) r = 14;
@@ -680,7 +680,7 @@ namespace BombsAway
                             case 6:
                             case 7:
                             case 8:
-                                NextSpot = NextBomb(Bombs);
+                                NextSpot = NextEnemy(Enemyyy);
                                 PictureBox pb = new PictureBox();
                                 pb.Name = "pb";
                                 pb.BackColor = Color.Transparent;
@@ -696,13 +696,13 @@ namespace BombsAway
                                     pb.Location = new System.Drawing.Point(rng.Next(0, WorldFrame.Width), 0);
                                 }
                                 WorldFrame.Controls.Add(pb);
-                                Bombs[NextBomb(Bombs)] = pb;
+                                Enemyyy[NextEnemy(Enemyyy)] = pb;
                                 DebugLog += DateTime.Now + ": Added bomb at " + NextSpot + "\n";
                                 break;
                             case 9:
                             case 10:
                             case 11:
-                                NextSpot = NextBomb(Bombs);
+                                NextSpot = NextEnemy(Enemyyy);
                                 PictureBox Coin = new PictureBox();
                                 Coin.Name = "Coin";
                                 Coin.BackColor = Color.Transparent;
@@ -711,11 +711,11 @@ namespace BombsAway
                                 Coin.Image = World.Coin;
                                 Coin.Location = new System.Drawing.Point(rng.Next(0, WorldFrame.Width), 0);
                                 WorldFrame.Controls.Add(Coin);
-                                Bombs[NextBomb(Bombs)] = Coin;
+                                Enemyyy[NextEnemy(Enemyyy)] = Coin;
                                 DebugLog += DateTime.Now + ": Added coin at " + NextSpot + "\n";
                                 break;
                             case 12:
-                                NextSpot = NextBomb(Bombs);
+                                NextSpot = NextEnemy(Enemyyy);
                                 PictureBox pbR = new PictureBox();
                                 pbR.Name = "pbR";
                                 pbR.BackColor = Color.Transparent;
@@ -731,11 +731,11 @@ namespace BombsAway
                                     pbR.Location = new System.Drawing.Point(1, 124);
                                 }
                                 WorldFrame.Controls.Add(pbR);
-                                Bombs[NextBomb(Bombs)] = pbR;
+                                Enemyyy[NextEnemy(Enemyyy)] = pbR;
                                 DebugLog += DateTime.Now + ": Added bomb at " + NextSpot + "\n";
                                 break;
                             case 13:
-                                NextSpot = NextBomb(Bombs);
+                                NextSpot = NextEnemy(Enemyyy);
                                 PictureBox pbL = new PictureBox();
                                 pbL.Name = "pbL";
                                 pbL.BackColor = Color.Transparent;
@@ -751,12 +751,12 @@ namespace BombsAway
                                     pbL.Location = new System.Drawing.Point(WorldFrame.Width + 30, 151);
                                 }
                                 WorldFrame.Controls.Add(pbL);
-                                Bombs[NextBomb(Bombs)] = pbL;
+                                Enemyyy[NextEnemy(Enemyyy)] = pbL;
                                 DebugLog += DateTime.Now + ": Added bomb at " + NextSpot + "\n";
                                 break;
                         }
                     }
-                }*/
+                }
         }
 
         private void timer_Sec_Tick(object sender, EventArgs e)
@@ -845,12 +845,12 @@ namespace BombsAway
             return t;
         }*/
 
-        public int GetBombsNum(PictureBox[] Arr)
+        public int GetEnemyNum(PictureBox[] Arr)
         {
             int x = 0;  //Gets every non null value in the array
-            foreach (PictureBox Bomb in Arr)
+            foreach (PictureBox Enemyyy in Arr)
             {
-                if (Bomb != null)
+                if (Enemyyy != null)
                 {
                     x++;
                 }
@@ -858,9 +858,9 @@ namespace BombsAway
             return x;
         }
 
-        public int NextBomb(PictureBox[] Arr)
+        public int NextEnemy(PictureBox[] Arr)
         {
-            if (GetBombsNum(Arr) < 10)
+            if (GetEnemyNum(Arr) < 10)
             {
                 for (int i = 0; i < 10; i++)
                 {   //Returns the first space in the array that isn't null
@@ -891,7 +891,7 @@ namespace BombsAway
             DebugMenu[7] = this.debug_PSpeed;
             DebugMenu[8] = this.debug_MSpeed;
             NPC[0] = pb_NPC1;
-            NPC[1] = pb_NPC2;
+            //NPC[1] = pb_NPC2;
             
         }
 
@@ -901,9 +901,7 @@ namespace BombsAway
         }
         public void MakeTransparent(Color transparentColor)
         {
-            Color backColor = Color.White;
-            myBitp = new Bitmap(player);
-            myBitp.MakeTransparent(backColor);
+
         }
 
         private void pb_NPC2_Click(object sender, EventArgs e)

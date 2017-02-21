@@ -52,11 +52,11 @@
             this.debug_PGravity = new System.Windows.Forms.Label();
             this.debug_MGravity = new System.Windows.Forms.Label();
             this.WorldFrame = new System.Windows.Forms.Panel();
-            this.pb_NPC2 = new System.Windows.Forms.PictureBox();
             this.pb_NPC1 = new System.Windows.Forms.PictureBox();
             this.label_Dead = new System.Windows.Forms.Label();
             //this.pb_Block1 = new System.Windows.Forms.PictureBox();
             //this.pb_Block2 = new System.Windows.Forms.PictureBox();
+            //this.pb_Pipe = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_Score = new System.Windows.Forms.Label();
@@ -64,10 +64,10 @@
             this.contextMenuStrip1.SuspendLayout();
             this.WorldFloor.SuspendLayout();
             this.WorldFrame.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_NPC2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC1)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pb_Pipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Player)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,7 +123,7 @@
             // 
             this.timer_Randombomb.Enabled = true;
             this.timer_Randombomb.Interval = 800;
-            this.timer_Randombomb.Tick += new System.EventHandler(this.timer_Randombomb_Tick);
+            this.timer_Randombomb.Tick += new System.EventHandler(this.timer_RandomEnemy_Tick);
             // 
             // timer_BombFailsafe
             // 
@@ -144,7 +144,6 @@
             // 
             // WorldFloor
             // 
-            this.WorldFloor.BackgroundImage = global::BombsAway.Properties.Resources.floor;
             this.WorldFloor.Controls.Add(this.debug_MSpeed);
             this.WorldFloor.Controls.Add(this.debug_Log);
             this.WorldFloor.Controls.Add(this.debug_PSpeed);
@@ -292,11 +291,11 @@
             this.WorldFrame.BackgroundImage = global::BombsAway.World.beach_background1;
             this.WorldFrame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.WorldFrame.ContextMenuStrip = this.contextMenuStrip1;
-            this.WorldFrame.Controls.Add(this.pb_NPC2);
             this.WorldFrame.Controls.Add(this.pb_NPC1);
             this.WorldFrame.Controls.Add(this.label_Dead);
-            //this.WorldFrame.Controls.Add(this.pb_Block1);
-            //this.WorldFrame.Controls.Add(this.pb_Block2);
+            this.WorldFrame.Controls.Add(this.pb_Block1);
+            this.WorldFrame.Controls.Add(this.pb_Block2);
+            //this.WorldFrame.Controls.Add(this.pb_Pipe);
             this.WorldFrame.Controls.Add(this.label2);
             this.WorldFrame.Controls.Add(this.label1);
             this.WorldFrame.Controls.Add(this.label_Score);
@@ -308,23 +307,9 @@
             this.WorldFrame.TabIndex = 0;
             this.WorldFrame.Paint += new System.Windows.Forms.PaintEventHandler(this.WorldFrame_Paint);
             // 
-            // pb_NPC2
-            // 
-            this.pb_NPC2.BackColor = System.Drawing.Color.Transparent;
-            this.pb_NPC2.BackgroundImage = global::BombsAway.World.beach_background;
-            this.pb_NPC2.Image = global::BombsAway.Enemy.Enemy_Left;
-            this.pb_NPC2.Location = new System.Drawing.Point(111, 44);
-            this.pb_NPC2.Name = "pb_NPC2";
-            this.pb_NPC2.Size = new System.Drawing.Size(35, 35);
-            this.pb_NPC2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_NPC2.TabIndex = 10;
-            this.pb_NPC2.TabStop = false;
-            this.pb_NPC2.Click += new System.EventHandler(this.pb_NPC2_Click);
-            // 
             // pb_NPC1
             // 
-            this.pb_NPC1.Image = global::BombsAway.Properties.Resources.Enemy_Right;
-            this.pb_NPC1.Location = new System.Drawing.Point(65, 55);
+            this.pb_NPC1.Location = new System.Drawing.Point(58, 86);
             this.pb_NPC1.Name = "pb_NPC1";
             this.pb_NPC1.Size = new System.Drawing.Size(35, 35);
             this.pb_NPC1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -365,7 +350,16 @@
             this.pb_Block2.Name = "pb_Block2";
             this.pb_Block2.Size = new System.Drawing.Size(135, 24);
             this.pb_Block2.TabIndex = 7;
-            this.pb_Block2.TabStop = false;*/
+            this.pb_Block2.TabStop = false;
+            // 
+            // pb_Pipe
+            // 
+            /*this.pb_Pipe.BackgroundImage = global::BombsAway.World.Pipe;
+            this.pb_Pipe.Location = new System.Drawing.Point(250, 196);
+            this.pb_Pipe.Name = "pb_Pipe";
+            this.pb_Pipe.Size = new System.Drawing.Size(35, 45);
+            this.pb_Pipe.TabIndex = 5;
+            this.pb_Pipe.TabStop = false;*/
             // 
             // label2
             // 
@@ -407,7 +401,7 @@
             this.pb_Player.Image = global::BombsAway.Character.stand_r;
             this.pb_Player.Location = new System.Drawing.Point(12, 76);
             this.pb_Player.Name = "pb_Player";
-            this.pb_Player.Size = new System.Drawing.Size(35, 55);
+            this.pb_Player.Size = new System.Drawing.Size(25, 45);
             this.pb_Player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Player.TabIndex = 0;
             this.pb_Player.TabStop = false;
@@ -433,10 +427,10 @@
             this.WorldFloor.PerformLayout();
             this.WorldFrame.ResumeLayout(false);
             this.WorldFrame.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_NPC2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_NPC1)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Block1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Block2)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pb_Pipe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Player)).EndInit();
             this.ResumeLayout(false);
 
@@ -475,7 +469,6 @@
         private System.Windows.Forms.ToolStripMenuItem onToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem offToolStripMenuItem;
         private System.Windows.Forms.PictureBox pb_NPC1;
-        private System.Windows.Forms.PictureBox pb_NPC2;
     }
 }
 
